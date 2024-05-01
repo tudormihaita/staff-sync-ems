@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<TabPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.iss.gui.controller.ProjectManagerController">
+   <tabs>
+      <Tab text="Dashboard">
+         <content>
+            <AnchorPane prefHeight="500.0" prefWidth="900.0">
+                <children>
+                    <BorderPane layoutX="282.0" layoutY="150.0" prefHeight="500.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <top>
+                            <AnchorPane prefHeight="80.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                                <children>
+                                    <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../media/staff-sync-icon.png" />
+                                        </image>
+                                    </ImageView>
+                                    <Label fx:id="managerWelcomeLabel" layoutX="153.0" layoutY="11.0" prefHeight="80.0" prefWidth="648.0" />
+                                </children>
+                            </AnchorPane>
+                        </top>
+                        <center>
+                            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <children>
+                                    <TableView fx:id="developersTableView" layoutX="22.0" layoutY="48.0" prefHeight="245.0" prefWidth="362.0">
+                                        <columns>
+                                            <TableColumn fx:id="developerNameColumn" prefWidth="123.0" text="Name" />
+                                            <TableColumn fx:id="developerBadgeColumn" prefWidth="94.0" text="Badge no." />
+                                            <TableColumn fx:id="developerDepartmentColumn" prefWidth="144.0" text="Department" />
+                                        </columns>
+                                    </TableView>
+                                    <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="34.0" prefWidth="204.0" text="Team Developers">
+                                        <font>
+                                            <Font name="System Bold" size="18.0" />
+                                        </font>
+                                    </Label>
+                                    <TableView layoutX="539.0" layoutY="57.0" prefHeight="228.0" prefWidth="338.0">
+                                        <columns>
+                                            <TableColumn prefWidth="95.0" />
+                                            <TableColumn prefWidth="75.0" />
+                                            <TableColumn prefWidth="93.0" />
+                                            <TableColumn prefWidth="74.0" />
+                                        </columns>
+                                    </TableView>
+                                    <Label alignment="CENTER" layoutX="618.0" layoutY="14.0" prefHeight="34.0" prefWidth="180.0" text="Clients">
+                                        <font>
+                                            <Font name="System Bold" size="18.0" />
+                                        </font>
+                                    </Label>
+                                    <CheckBox fx:id="activeUsersFilterCheckbox" layoutX="234.0" layoutY="16.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="181.0" text="Filter Active Users">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <Button fx:id="logOutButton" layoutX="22.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="40.0" prefWidth="100.0" text="Log out" />
+                                </children>
+                            </AnchorPane>
+                        </center>
+                    </BorderPane>
+                </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Projects">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
