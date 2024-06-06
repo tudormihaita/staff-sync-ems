@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class DeveloperDBRepository extends AbstractDBRepository<Long, Developer> implements DeveloperRepository {
+public class DeveloperDBRepository extends AbstractDBRepository<Long, Developer> {
 
     public DeveloperDBRepository(Properties properties) {
         super(properties, "developers");
@@ -76,7 +76,6 @@ public class DeveloperDBRepository extends AbstractDBRepository<Long, Developer>
         return updateStatement;
     }
 
-    @Override
     public List<Developer> findActiveTeamDevelopers(Department department) {
         log.traceEntry("Finding active developers at time {} from department {}", LocalDateTime.now(), department);
         List<Developer> activeDevelopers = new ArrayList<>();
@@ -102,7 +101,6 @@ public class DeveloperDBRepository extends AbstractDBRepository<Long, Developer>
         return activeDevelopers;
     }
 
-    @Override
     public List<Developer> findTeamDevelopers(Department department) {
         log.traceEntry("Finding developers from department {}", department);
         List<Developer> developers = new ArrayList<>();

@@ -2,10 +2,11 @@ package ro.iss.repository.database;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ro.iss.model.Entity;
-import ro.iss.repository.Repository;
-import ro.iss.repository.utils.DBUtils;
+import ro.iss.model.Identifiable;
+import ro.iss.repository.CrudRepository;
+import ro.iss.repository.utils.JDBCUtils;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,15 +16,15 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 
-public abstract class AbstractDBRepository<ID, E extends Entity<ID>> implements Repository<ID, E> {
+public abstract class AbstractDBRepository<ID extends Serializable, E extends Identifiable<ID>> implements CrudRepository<ID, E> {
     protected final String table;
-    protected final DBUtils dbUtils;
+    protected final JDBCUtils dbUtils;
     protected static final Logger log = LogManager.getLogger(AbstractDBRepository.class);
 
     protected AbstractDBRepository(Properties properties, String table) {
         log.info("Initializing {} with properties: {}", this.getClass().getSimpleName(), properties);
         this.table = table;
-        dbUtils = new DBUtils(properties);
+        dbUtils = new JDBCUtils(properties);
     }
 
 

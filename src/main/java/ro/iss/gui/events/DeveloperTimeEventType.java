@@ -1,5 +1,5 @@
 package ro.iss.gui.events;
 
-public enum TimeTrackingEventType {
+public enum DeveloperTimeEventType {
     CLOCK_IN, CLOCK_OUT
 }

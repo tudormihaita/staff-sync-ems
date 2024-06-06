@@ -33,6 +33,29 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
     implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
 
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.3.0'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+    implementation 'org.springframework.boot:spring-boot-starter:3.3.0'
+
+    // https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime
+    implementation 'org.glassfish.jaxb:jaxb-runtime:4.0.5'
+
+    // https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.2'
+
+    implementation 'jakarta.el:jakarta.el-api:3.0.3'
+    implementation 'org.glassfish:jakarta.el:4.0.2'
+
+    // Hibernate Dependencies
+
+    // https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+//    implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
+
+    // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+//    implementation 'org.hibernate.orm:hibernate-core:6.5.0.Final'
+
 }
 
 application {

@@ -1,10 +1,11 @@
 package ro.iss.repository;
 
-import ro.iss.model.Entity;
+import ro.iss.model.Identifiable;
 
+import java.io.Serializable;
 import java.util.Optional;
 
-public interface Repository<ID, E extends Entity<ID>> {
+public interface CrudRepository<ID extends Serializable, E extends Identifiable<ID>> {
 
     /**
      * Searches for an entity by identifier and returns it

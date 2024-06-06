@@ -8,12 +8,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DBUtils {
+public class JDBCUtils {
     private final Properties jdbcProps;
     private static final Logger logger = LogManager.getLogger();
     private Connection instance = null;
 
-    public DBUtils(Properties jdbcProps) {
+    public JDBCUtils(Properties jdbcProps) {
         this.jdbcProps = jdbcProps;
     }
 

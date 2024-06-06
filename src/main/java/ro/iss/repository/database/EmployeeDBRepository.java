@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Properties;
 
-public class EmployeeDBRepository extends AbstractDBRepository<Long, Employee> implements EmployeeRepository {
+public class EmployeeDBRepository extends AbstractDBRepository<Long, Employee> {
 
     public EmployeeDBRepository(Properties properties) {
         super(properties, "employees");
@@ -80,7 +80,6 @@ public class EmployeeDBRepository extends AbstractDBRepository<Long, Employee> i
         return updateStatement;
     }
 
-    @Override
     public Optional<Employee> findByLoginCredentials(String username, String password) {
         log.traceEntry("Finding employee with given login credentials {}", username);
 

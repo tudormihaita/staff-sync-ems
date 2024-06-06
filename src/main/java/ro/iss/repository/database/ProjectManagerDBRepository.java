@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class ProjectManagerDBRepository extends AbstractDBRepository<Long, ProjectManager> implements ProjectManagerRepository {
+public class ProjectManagerDBRepository extends AbstractDBRepository<Long, ProjectManager> {
     public ProjectManagerDBRepository(Properties properties) {
         super(properties, "project_managers");
     }
